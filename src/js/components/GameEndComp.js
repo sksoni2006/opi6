@@ -14,17 +14,27 @@ const GameEndComp = ({
     message,
     reset
 }) => {
+    const handleResetClick = () => {
+        const password = prompt("Enter password to restart the game:");
+        if (password === "74123") {
+            reset();
+        } else if (password !== null) {
+            alert("Incorrect password!");
+        }
+    };
+
     return (
         <div className={style}>
             <p className='message'>{message}</p>
-            <img src="./images/restart.png"  onClick={reset}/>
+            <img src="./images/restart.png"  onClick={handleResetClick}/>
         </div>
     );
 };
 
 GameEndComp.propTypes = {
     style: PropTypes.string.isRequired,
-    message: PropTypes.string.isRequired
+    message: PropTypes.string.isRequired,
+    reset: PropTypes.func.isRequired
 };
 
 module.exports = {
