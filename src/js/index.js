@@ -11,7 +11,7 @@ const { PLAYER_DIRECTIONS, TURNS, GAME_CONTINUITY } = require('./model/flags.js'
 const { Game } = require('./model/Game.js');
 const bootstrap = require('bootstrap');
 
-const NumbersApp = () => (
+const TickerTycoonApp = () => (
     <GameCont boardSize={9} />
 );
 
@@ -46,7 +46,7 @@ store.subscribe(saveGame);
 
 ReactDOM.render(
     <Provider store={store}>
-        <NumbersApp/>
+        <TickerTycoonApp/>
     </Provider>,
     document.getElementById('boardDiv')
 );

@@ -27,7 +27,9 @@
 
 body {
   @include no-select;
-  background-image: linear-gradient(45deg, $light-purple, $dark-purple);
+  // background-image: linear-gradient(45deg, $light-purple, $dark-purple);
+   background-image: linear-gradient(135deg, #13766b,#758fa8);
+  // background-color: gray;
   color: $number-color;
   font-family: Quicksand-Regular, Arial, sans-serif;
   user-select: none;

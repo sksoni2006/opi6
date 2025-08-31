@@ -29,9 +29,9 @@ const InfoComp = ({
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img src="./images/logo.png" />
+                        <h2 className="text-center mb-3">Ticker Tyc🪙🪙n</h2>
                         <p>
-                            Numberness is a fun casual game. It is a great time killer; you
+                            Ticker Tycoon is a fun casual trading game. It is a great time killer; you
                             can play it during breaks when working or studying.
                         </p>
 

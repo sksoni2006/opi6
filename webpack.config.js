@@ -67,7 +67,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Numbers',
+			title: 'Ticker Tycoon',
 			filename: 'index.html',
       template: './src/index.html',
       alwaysWriteToDisk: true

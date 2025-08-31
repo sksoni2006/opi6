@@ -141,3 +141,14 @@
   top: $top-logo-frame-top + px;
   width: $top-logo-frame-width + px;
 }
+
+.logo-text {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}

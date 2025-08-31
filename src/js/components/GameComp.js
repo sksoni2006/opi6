@@ -6,7 +6,7 @@ const { WildCardCont } = require('../containers/WildCardCont.js');
 const { GameEndCont } = require('../containers/GameEndCont.js');
 const { ScoreCont } = require('../containers/ScoreCont.js');
 const { SocialsCont } = require('../containers/SocialsCont.js');
-const { InfoComp } = require('../components/InfoComp.js');
+const { InfoComp } = require('./InfoComp.js');
 
 /**
  * Functional {@link https://reactjs.org/docs/react-component.html|Component}
@@ -21,6 +21,15 @@ const GameComp = ({
     reset,
     board
 }) => {
+    const handleResetClick = () => {
+        const password = prompt("Enter password to restart the game:");
+        if (password === "74123") {
+            reset();
+        } else if (password !== null) {
+            alert("Incorrect password!");
+        }
+    };
+
     let modalId = "game-info";
     let modalIdHash = "#" + modalId;
     let boardSize = board.length;
@@ -51,7 +60,7 @@ const GameComp = ({
                 <div className="top-bar row d-flex justify-content-center">
 
                     <div className="top-control d-flex">
-                        <img className="mt-auto" src="./images/restart.png" onClick={reset} />
+                        <img className="mt-auto" src="./images/restart.png" onClick={handleResetClick} />
                     </div>
 
                     <div className="left-curve"/>
@@ -62,7 +71,7 @@ const GameComp = ({
 
                     <div className="top-center">
                         <div className="top-logo">
-                            <img src="./images/logo.png" />
+                            <h1 className="logo-text">Ticker Tyc🪙🪙n</h1>
                         </div>
                     </div>
 
@@ -85,26 +94,9 @@ const GameComp = ({
                     <GameEndCont boardSize={boardSize}/>
                 </div>
             </div>
-            <div className="container game-section">
-                <div className="row bottom-bar d-flex justify-content-between">
-                    <div className="align-self-start">
-                        <SocialsCont />
-                    </div>
-                    <div className="copyright-box align-self-start">
-                        <span>
-                            Copyright © 2019 <a href="https:sosegon.github.io/se-vel" target="_blank">
-                                Se-Vel
-                            </a>.
-                        </span><br />
-                        <span>
-                            All Rights Reserved.
-                        </span>
-                    </div>
-                </div>
-            </div>
             <InfoComp id={modalId} style=""/>
             <div className='game-splash'>
-                <img src="./images/logo.png" />
+                <h1 className="splash-logo-text">Ticker Tyc🪙🪙n</h1>
             </div>
         </div>
     );
